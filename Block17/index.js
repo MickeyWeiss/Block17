@@ -17,36 +17,45 @@ class Numbers {
     //print the numbers in data
     console.log(this.data)
   }
-  odds() {
+  odds(data) {
     //return the odd numbers in data
-    oddNumbers = this.data.filter((number) => number % 2 === 1);
-    return oddNumbers;
+    const odds = this.data.filter((data) => data % 2 === 1)
+    return odds
  }
 
   evens(data) {
     //return the even numbers in data
-    evenNumbers = this.data.filter((number) => number % 2 === 0);
-    return evenNumbers;
+    const evens = this.data.filter((data) => data % 2 ===0)
+    return evens
+
   }
   sum(data) {
     //return the sum of the numbers
-    let i = 0
-    for (let i = 0; i <= this.data; i++){
-      i += sum;
+    let sum = 0;
+    for (let i = 0; i < this.data.length; i++) {
+      sum += this.data[i]
     }
-    return sum;
+    return sum
   }
   product() {
     //return the product of the numbers
+    let product = 1;
+    for (let i = 0; i < this.data.length; i++) {
+      product *= this.data[i]
+    }
+    return product
   }
   greaterThan(target) {
     //return the numbers greater than the target
+    const greater = this.data.filter((data) => data > target)
+    return greater
   }
   howMany(target) {
     //return the count of a given number
-  }
+    const howMany = this.data.filter((data) => data === target)
+    return howMany
 }
-
+}
 //Prompt the user for a list of integers separated by commas
 const str = prompt("enter some numbers, like this", "1,2,3,3,5,9");
 
